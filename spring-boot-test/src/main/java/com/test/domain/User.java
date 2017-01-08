@@ -1,12 +1,26 @@
 package com.test.domain;
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "user")
-public class User {
+public class User implements Serializable {
+	private static final long serialVersionUID = -8294212352067084915L;
 	private Long id;
 	private String name;
+	private Boolean isValid = true;
+
+	public User() {
+		super();
+	}
+
+	public User(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 
 	@XmlElement(name = "id")
 	public Long getId() {
@@ -24,6 +38,14 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Boolean getIsValid() {
+		return isValid;
+	}
+
+	public void setIsValid(Boolean isValid) {
+		this.isValid = isValid;
 	}
 
 	@Override
