@@ -10,7 +10,6 @@ import java.util.concurrent.ConcurrentMap;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.core.MediaType;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +24,7 @@ import com.test.domain.Users1;
 
 @RestController
 @RequestMapping("/user")
-@Scope("prototype")
+//@Scope("prototype")
 public class UserResource {
 
 	private static ConcurrentMap<Long, User> userMap = new ConcurrentHashMap<Long, User>();
