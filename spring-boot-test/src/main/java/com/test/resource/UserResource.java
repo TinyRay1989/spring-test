@@ -193,7 +193,9 @@ public class UserResource {
 			return ResponseEntity.badRequest().build();
 		}
 		if (!userMap.containsKey(id)) {
-			return ResponseEntity.notFound().build();
+			createUser(user);
+			return ResponseEntity.created(ucBuilder
+					.path("/user/{id}").buildAndExpand(id).toUri()).build();
 		}
 		User dbUser = userMap.get(id);
 		if (!dbUser.getIsValid()) {
