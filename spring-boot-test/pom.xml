@@ -10,14 +10,11 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <!-- 这种方法maven无法下载spring-boot-test.jar 不知道为啥，也许是bug吧...
-        <groupId>io.spring.platform</groupId>
-        <artifactId>platform-bom</artifactId>
-        <version>2.0.8.RELEASE</version> 
-        -->
+        <!-- 这种方法maven无法下载spring-boot-test.jar 不知道为啥，也许是bug吧... <groupId>io.spring.platform</groupId> <artifactId>platform-bom</artifactId> 
+          <version>2.0.8.RELEASE</version> -->
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
-        <version>1.4.3.RELEASE</version>
+        <version>${spring-framework-boot.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -43,6 +40,21 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-framework-boot.version}</version>
+        <configuration>
+          <mainClass>com.test.Application</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin.version}</version>
@@ -60,8 +72,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${maven-clean-plugin.version}</version>
       </plugin>
     </plugins>
   </build>

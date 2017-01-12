@@ -12,9 +12,11 @@
     <JDK.version>1.7</JDK.version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>
-    <maven-war-plugin.version>2.3</maven-war-plugin.version>
-    <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
-    <maven-eclipse-plugin.version>2.9</maven-eclipse-plugin.version>
+    <spring-framework-boot.version>1.4.3.RELEASE</spring-framework-boot.version>
+    <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
+    <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+    <maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version> 
+    <maven-clean-plugin.version>2.6.1</maven-clean-plugin.version>
+    <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
   </properties>
 </project>
