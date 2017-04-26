@@ -9,6 +9,7 @@
     <module>spring-boot-test</module>
     <module>spring-boot-security-test</module>
     <module>spring-boot-javaconfig</module>
+    <module>spring-security</module>
   </modules>
   <properties>
     <JDK.version>1.7</JDK.version>
