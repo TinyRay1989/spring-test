@@ -15,7 +15,7 @@
     <JDK.version>1.7</JDK.version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <spring-framework-boot.version>1.4.3.RELEASE</spring-framework-boot.version>
+    <spring-framework-boot.version>1.5.3.RELEASE</spring-framework-boot.version>
     <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
     <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
     <maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version> 
